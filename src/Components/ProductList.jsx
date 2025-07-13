@@ -1,5 +1,5 @@
 import { useGlobalContext } from "../hooks/useGlobalContex";
-import Product from "./product";
+import Product from "./Product";
 
 
 function ProductsList({ products }) {
