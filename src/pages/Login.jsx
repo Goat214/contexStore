@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalContext";
+import { Link } from "react-router-dom";
 
 function Login() {
   const { userData, dispatch } = useContext(GlobalContext);
@@ -56,12 +57,12 @@ function Login() {
           </button>
           <div className="flex justify-between">
             <p>royhatdan o'tmadingizmi? </p>
-            <a
-              href="./signup"
+            <Link
+              to="/signup"
               style={{ color: "blue", textDecoration: "underline" }}
             >
-              signup
-            </a>
+              Signup
+            </Link>
           </div>
         </form>
       </div>
