@@ -93,12 +93,12 @@ function Signup() {
           <button type="submit" style={styles.button}>
             Ro‘yxatdan o‘tish
           </button>
-          <a
-            href="./login"
-            style={{ color: "blue", textDecoration: "underline" }}
-          >
-            login
-          </a>
+          <Link
+              to="/login"
+              style={{ color: "blue", textDecoration: "underline" }}
+            >
+              Login
+            </Link>
         </form>
       </div>
     </section>
