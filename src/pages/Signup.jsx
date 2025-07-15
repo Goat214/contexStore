@@ -6,7 +6,6 @@ function Signup() {
   const { userData, dispatch } = useContext(GlobalContext);
   const navigate = useNavigate();
 
-  // Inputlar uchun state
   const [displayNickName, setDisplayNickName] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
@@ -26,17 +25,13 @@ function Signup() {
 
     dispatch({ type: "ADD_USER", payload: newUser });
 
-    // LocalStorage ga yangi foydalanuvchilarni qo‘shish
     const updatedUsers = [...userData, newUser];
     localStorage.setItem("users", JSON.stringify(updatedUsers));
 
-    // Avtomatik login qilish uchun dispatch
     dispatch({ type: "LOGIN", payload: newUser });
 
-    // Ro‘yxatdan o‘tishdan keyin bosh sahifaga yo‘naltirish
     navigate("/login");
 
-    // Formani tozalash (optional)
     setDisplayNickName("");
     setDisplayName("");
     setEmail("");
@@ -99,11 +94,11 @@ function Signup() {
             Ro‘yxatdan o‘tish
           </button>
           <a
-              href="./login"
-              style={{ color: "blue", textDecoration: "underline" }}
-            >
-              login
-            </a>
+            href="./login"
+            style={{ color: "blue", textDecoration: "underline" }}
+          >
+            login
+          </a>
         </form>
       </div>
     </section>
